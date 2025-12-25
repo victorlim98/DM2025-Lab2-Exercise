@@ -1,0 +1,230 @@
+<style>
+.lx-highlight { position: relative; border-radius:3px; padding:1px 2px;}
+.lx-highlight .lx-tooltip {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  background: #333;
+  color: #fff;
+  text-align: left;
+  border-radius: 4px;
+  padding: 6px 8px;
+  position: absolute;
+  z-index: 1000;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  max-width: 240px;
+  white-space: normal;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.lx-highlight:hover .lx-tooltip { visibility: visible; opacity:1; }
+.lx-animated-wrapper { max-width: 100%; font-family: Arial, sans-serif; }
+.lx-controls {
+  background: #fafafa; border: 1px solid #90caf9; border-radius: 8px;
+  padding: 12px; margin-bottom: 16px;
+}
+.lx-button-row {
+  display: flex; justify-content: center; gap: 8px; margin-bottom: 12px;
+}
+.lx-control-btn {
+  background: #4285f4; color: white; border: none; border-radius: 4px;
+  padding: 8px 16px; cursor: pointer; font-size: 13px; font-weight: 500;
+  transition: background-color 0.2s;
+}
+.lx-control-btn:hover { background: #3367d6; }
+.lx-progress-container {
+  margin-bottom: 8px;
+}
+.lx-progress-slider {
+  width: 100%; margin: 0; appearance: none; height: 6px;
+  background: #ddd; border-radius: 3px; outline: none;
+}
+.lx-progress-slider::-webkit-slider-thumb {
+  appearance: none; width: 18px; height: 18px; background: #4285f4;
+  border-radius: 50%; cursor: pointer;
+}
+.lx-progress-slider::-moz-range-thumb {
+  width: 18px; height: 18px; background: #4285f4; border-radius: 50%;
+  cursor: pointer; border: none;
+}
+.lx-status-text {
+  text-align: center; font-size: 12px; color: #666; margin-top: 4px;
+}
+.lx-text-window {
+  font-family: monospace; white-space: pre-wrap; border: 1px solid #90caf9;
+  padding: 12px; max-height: 260px; overflow-y: auto; margin-bottom: 12px;
+  line-height: 1.6;
+}
+.lx-attributes-panel {
+  background: #fafafa; border: 1px solid #90caf9; border-radius: 6px;
+  padding: 8px 10px; margin-top: 8px; font-size: 13px;
+}
+.lx-current-highlight {
+  border-bottom: 4px solid #ff4444;
+  font-weight: bold;
+  animation: lx-pulse 1s ease-in-out;
+}
+@keyframes lx-pulse {
+  0% { text-decoration-color: #ff4444; }
+  50% { text-decoration-color: #ff0000; }
+  100% { text-decoration-color: #ff4444; }
+}
+.lx-legend {
+  font-size: 12px; margin-bottom: 8px;
+  padding-bottom: 8px; border-bottom: 1px solid #e0e0e0;
+}
+.lx-label {
+  display: inline-block;
+  padding: 2px 4px;
+  border-radius: 3px;
+  margin-right: 4px;
+  color: #000;
+}
+.lx-attr-key {
+  font-weight: 600;
+  color: #1565c0;
+  letter-spacing: 0.3px;
+}
+.lx-attr-value {
+  font-weight: 400;
+  opacity: 0.85;
+  letter-spacing: 0.2px;
+}
+
+/* Add optimizations with larger fonts and better readability for GIFs */
+.lx-gif-optimized .lx-text-window { font-size: 16px; line-height: 1.8; }
+.lx-gif-optimized .lx-attributes-panel { font-size: 15px; }
+.lx-gif-optimized .lx-current-highlight { text-decoration-thickness: 4px; }
+</style>
+    <div class="lx-animated-wrapper lx-gif-optimized">
+      <div class="lx-attributes-panel">
+        <div class="lx-legend">Highlights Legend: <span class="lx-label" style="background-color:#D2E3FC;">opinion_statement</span></div>
+        <div id="attributesContainer"></div>
+      </div>
+      <div class="lx-text-window" id="textWindow">
+        **Page 1**
+&quot;&quot;&quot;
+IMAX
+The film Oppenheimer is <span class="lx-highlight lx-current-highlight" data-idx="0" style="background-color:#D2E3FC;">a mystery to me</span>; here is a movie just over
+three hours in length, yet there are <span class="lx-highlight" data-idx="1" style="background-color:#D2E3FC;">no gunshots, no car chases, no
+fist fights, rarely does anyone swear, and we don’t actually see
+atomic bombs being dropped on Hiroshima and Nagasaki</span>. There is
+some brief sex in it, but <span class="lx-highlight" data-idx="2" style="background-color:#D2E3FC;">the two people involved don’t seem to be
+enjoying themselves</span>. <span class="lx-highlight" data-idx="3" style="background-color:#D2E3FC;">We’re left with a tremendous amount of
+dialogue and very little action</span>. Yet the movie has grossed $950 million
+worldwide and is now the highest-grossing biographical film of all
+time. It’s also closing in on the highest-grossing ‘R’ rated film of all
+time (although here in Canada the film is rated PG14). I have to ask:
+How is $950 million in box office even remotely possible, in a world of
+<span class="lx-highlight" data-idx="4" style="background-color:#D2E3FC;">shortened attention spans</span> and superhero films? 
+Don’t get me wrong, I’ve been guilty of a shortened attention span
+too from time to time but The Journal recently polled 8,000
+moviegoers to discover that two hours is the limit for a film’s length
+for most cinema enthusiasts. Only 12% were interested in three-hour
+movies. I believe <span class="lx-highlight" data-idx="5" style="background-color:#D2E3FC;">superhero films definitely have their place too</span>, as <span class="lx-highlight" data-idx="6" style="background-color:#D2E3FC;">I
+loved Avengers: Endgame, Doctor Strange and Spider-Man: No Way
+Home</span> (among many others). But I digress. 
+Robert Oppenheimer is the hero of this story, and he has been tasked
+with overseeing the infamous Manhattan Project’s Los Alamos lab in
+New Mexico during World War II. His team’s mission is to build the
+world’s first atomic bomb before the Germans do. But make no
+mistake—<span class="lx-highlight" data-idx="7" style="background-color:#D2E3FC;">this is Oppenheimer’s story</span>: <span class="lx-highlight" data-idx="8" style="background-color:#D2E3FC;">every scene is about
+Oppenheimer, his decisions, and the repercussions of those decisions
+that will haunt him for the rest of his life</span>. <span class="lx-highlight" data-idx="9" style="background-color:#D2E3FC;">Viewers who are expecting
+a drama about American B29s dropping bombs on two of Japan’s
+cities need to look for another film</span>.  
+Want more content like this? Join
+15,000+ creatives who trust the Insider
+Advantage newsletter
+SIGN UP NOW!
+25/12/2025, 14:26
+Oppenheimer Movie Review | The Mystery of Its Success 
+https://www.torontofilmschool.ca/blog/oppenheimer-film-review/
+2/10
+&quot;&quot;&quot;
+
+
+      </div>
+      <div class="lx-controls">
+        <div class="lx-button-row">
+          <button class="lx-control-btn" onclick="playPause()">▶️ Play</button>
+          <button class="lx-control-btn" onclick="prevExtraction()">⏮ Previous</button>
+          <button class="lx-control-btn" onclick="nextExtraction()">⏭ Next</button>
+        </div>
+        <div class="lx-progress-container">
+          <input type="range" id="progressSlider" class="lx-progress-slider"
+                 min="0" max="9" value="0"
+                 onchange="jumpToExtraction(this.value)">
+        </div>
+        <div class="lx-status-text">
+          Entity <span id="entityInfo">1/10</span> |
+          Pos <span id="posInfo">[44-59]</span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function() {
+        const extractions = [{"index": 0, "class": "opinion_statement", "text": "a mystery to me", "color": "#D2E3FC", "startPos": 44, "endPos": 59, "beforeText": "**Page 1**\n&quot;&quot;&quot;\nIMAX\nThe film Oppenheimer is ", "extractionText": "a mystery to me", "afterText": "; here is a movie just over\nthree hours in length, yet there are no gunshots, no car chases, no\nfist fights, rarely does anyone swear, and we don\u2019t ac", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The film Oppenheimer</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Neutral</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">a mystery</span>}</div>"}, {"index": 1, "class": "opinion_statement", "text": "no gunshots, no car chases, no fist fights, rarely does anyone swear, and we don\u2019t actually see atomic bombs being dropped on Hiroshima and Nagasaki", "color": "#D2E3FC", "startPos": 124, "endPos": 272, "beforeText": "**Page 1**\n&quot;&quot;&quot;\nIMAX\nThe film Oppenheimer is a mystery to me; here is a movie just over\nthree hours in length, yet there are ", "extractionText": "no gunshots, no car chases, no\nfist fights, rarely does anyone swear, and we don\u2019t actually see\natomic bombs being dropped on Hiroshima and Nagasaki", "afterText": ". There is\nsome brief sex in it, but the two people involved don\u2019t seem to be\nenjoying themselves. We\u2019re left with a tremendous amount of\ndialogue and", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The film Oppenheimer</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">no gunshots, no car chases, no fist fights, rarely does anyone swear, and we don\u2019t actually see atomic bombs being dropped on Hiroshima and Nagasaki</span>}</div>"}, {"index": 2, "class": "opinion_statement", "text": "the two people involved don\u2019t seem to be enjoying themselves", "color": "#D2E3FC", "startPos": 309, "endPos": 369, "beforeText": " fights, rarely does anyone swear, and we don\u2019t actually see\natomic bombs being dropped on Hiroshima and Nagasaki. There is\nsome brief sex in it, but ", "extractionText": "the two people involved don\u2019t seem to be\nenjoying themselves", "afterText": ". We\u2019re left with a tremendous amount of\ndialogue and very little action. Yet the movie has grossed $950 million\nworldwide and is now the highest-gros", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">brief sex</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">don\u2019t seem to be enjoying themselves</span>}</div>"}, {"index": 3, "class": "opinion_statement", "text": "We\u2019re left with a tremendous amount of dialogue and very little action", "color": "#D2E3FC", "startPos": 371, "endPos": 441, "beforeText": "tomic bombs being dropped on Hiroshima and Nagasaki. There is\nsome brief sex in it, but the two people involved don\u2019t seem to be\nenjoying themselves. ", "extractionText": "We\u2019re left with a tremendous amount of\ndialogue and very little action", "afterText": ". Yet the movie has grossed $950 million\nworldwide and is now the highest-grossing biographical film of all\ntime. It\u2019s also closing in on the highest-", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The film Oppenheimer</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">tremendous amount of dialogue and very little action</span>}</div>"}, {"index": 4, "class": "opinion_statement", "text": "shortened attention spans", "color": "#D2E3FC", "startPos": 764, "endPos": 789, "beforeText": " of all\ntime (although here in Canada the film is rated PG14). I have to ask:\nHow is $950 million in box office even remotely possible, in a world of\n", "extractionText": "shortened attention spans", "afterText": " and superhero films?\u00a0\nDon\u2019t get me wrong, I\u2019ve been guilty of a shortened attention span\ntoo from time to time but The Journal recently polled 8,000\n", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">moviegoers</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">shortened attention spans</span>}</div>"}, {"index": 5, "class": "opinion_statement", "text": "superhero films definitely have their place too", "color": "#D2E3FC", "startPos": 1096, "endPos": 1143, "beforeText": "ers to discover that two hours is the limit for a film\u2019s length\nfor most cinema enthusiasts. Only 12% were interested in three-hour\nmovies. I believe ", "extractionText": "superhero films definitely have their place too", "afterText": ", as I\nloved Avengers: Endgame, Doctor Strange and Spider-Man: No Way\nHome (among many others). But I digress.\u00a0\nRobert Oppenheimer is the hero of this", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">superhero films</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">definitely have their place</span>}</div>"}, {"index": 6, "class": "opinion_statement", "text": "I loved Avengers: Endgame, Doctor Strange and Spider-Man: No Way Home", "color": "#D2E3FC", "startPos": 1148, "endPos": 1217, "beforeText": "lm\u2019s length\nfor most cinema enthusiasts. Only 12% were interested in three-hour\nmovies. I believe superhero films definitely have their place too, as ", "extractionText": "I\nloved Avengers: Endgame, Doctor Strange and Spider-Man: No Way\nHome", "afterText": " (among many others). But I digress.\u00a0\nRobert Oppenheimer is the hero of this story, and he has been tasked\nwith overseeing the infamous Manhattan Proj", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">superhero films</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">loved</span>}</div>"}, {"index": 7, "class": "opinion_statement", "text": "this is Oppenheimer\u2019s story", "color": "#D2E3FC", "startPos": 1527, "endPos": 1554, "beforeText": "Alamos lab in\nNew Mexico during World War II. His team\u2019s mission is to build the\nworld\u2019s first atomic bomb before the Germans do. But make no\nmistake\u2014", "extractionText": "this is Oppenheimer\u2019s story", "afterText": ": every scene is about\nOppenheimer, his decisions, and the repercussions of those decisions\nthat will haunt him for the rest of his life. Viewers who ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The film Oppenheimer</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Neutral</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">Oppenheimer\u2019s story</span>}</div>"}, {"index": 8, "class": "opinion_statement", "text": "every scene is about Oppenheimer, his decisions, and the repercussions of those decisions that will haunt him for the rest of his life", "color": "#D2E3FC", "startPos": 1556, "endPos": 1690, "beforeText": "ng World War II. His team\u2019s mission is to build the\nworld\u2019s first atomic bomb before the Germans do. But make no\nmistake\u2014this is Oppenheimer\u2019s story: ", "extractionText": "every scene is about\nOppenheimer, his decisions, and the repercussions of those decisions\nthat will haunt him for the rest of his life", "afterText": ". Viewers who are expecting\na drama about American B29s dropping bombs on two of Japan\u2019s\ncities need to look for another film.\u00a0\u00a0\nWant more content lik", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The film Oppenheimer</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">will haunt him for the rest of his life</span>}</div>"}, {"index": 9, "class": "opinion_statement", "text": "Viewers who are expecting a drama about American B29s dropping bombs on two of Japan\u2019s cities need to look for another film", "color": "#D2E3FC", "startPos": 1692, "endPos": 1815, "beforeText": "imer\u2019s story: every scene is about\nOppenheimer, his decisions, and the repercussions of those decisions\nthat will haunt him for the rest of his life. ", "extractionText": "Viewers who are expecting\na drama about American B29s dropping bombs on two of Japan\u2019s\ncities need to look for another film", "afterText": ".\u00a0\u00a0\nWant more content like this? Join\n15,000+ creatives who trust the Insider\nAdvantage newsletter\nSIGN UP NOW!\n25/12/2025, 14:26\nOppenheimer Movie Re", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The film Oppenheimer</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">need to look for another film</span>}</div>"}];
+        let currentIndex = 0;
+        let isPlaying = false;
+        let animationInterval = null;
+        let animationSpeed = 1.0;
+
+        function updateDisplay() {
+          const extraction = extractions[currentIndex];
+          if (!extraction) return;
+
+          document.getElementById('attributesContainer').innerHTML = extraction.attributesHtml;
+          document.getElementById('entityInfo').textContent = (currentIndex + 1) + '/' + extractions.length;
+          document.getElementById('posInfo').textContent = '[' + extraction.startPos + '-' + extraction.endPos + ']';
+          document.getElementById('progressSlider').value = currentIndex;
+
+          const playBtn = document.querySelector('.lx-control-btn');
+          if (playBtn) playBtn.textContent = isPlaying ? '⏸ Pause' : '▶️ Play';
+
+          const prevHighlight = document.querySelector('.lx-text-window .lx-current-highlight');
+          if (prevHighlight) prevHighlight.classList.remove('lx-current-highlight');
+          const currentSpan = document.querySelector('.lx-text-window span[data-idx="' + currentIndex + '"]');
+          if (currentSpan) {
+            currentSpan.classList.add('lx-current-highlight');
+            currentSpan.scrollIntoView({block: 'center', behavior: 'smooth'});
+          }
+        }
+
+        function nextExtraction() {
+          currentIndex = (currentIndex + 1) % extractions.length;
+          updateDisplay();
+        }
+
+        function prevExtraction() {
+          currentIndex = (currentIndex - 1 + extractions.length) % extractions.length;
+          updateDisplay();
+        }
+
+        function jumpToExtraction(index) {
+          currentIndex = parseInt(index);
+          updateDisplay();
+        }
+
+        function playPause() {
+          if (isPlaying) {
+            clearInterval(animationInterval);
+            isPlaying = false;
+          } else {
+            animationInterval = setInterval(nextExtraction, animationSpeed * 1000);
+            isPlaying = true;
+          }
+          updateDisplay();
+        }
+
+        window.playPause = playPause;
+        window.nextExtraction = nextExtraction;
+        window.prevExtraction = prevExtraction;
+        window.jumpToExtraction = jumpToExtraction;
+
+        updateDisplay();
+      })();
+    </script>
